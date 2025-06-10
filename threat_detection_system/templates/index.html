@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Threat Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Threat Detection System</h1>
+
+        <section>
+            <h2>Phishing URL Detection</h2>
+            <form id="urlForm">
+                <input type="text" id="urlInput" placeholder="Enter URL to check" required />
+                <button type="submit">Check URL</button>
+            </form>
+            <div id="urlResult" class="result"></div>
+        </section>
+
+        <section>
+            <h2>Email Validation</h2>
+            <form id="emailForm">
+                <input type="email" id="emailInput" placeholder="Enter email to check" required />
+                <button type="submit">Check Email</button>
+            </form>
+            <div id="emailResult" class="result"></div>
+        </section>
+
+        <section>
+            <h2>Intrusion Detection from Log File</h2>
+            <form id="logForm" enctype="multipart/form-data">
+                <input type="file" id="logFileInput" accept=".log,.txt" required />
+                <button type="submit">Upload and Analyze</button>
+            </form>
+            <div id="logResult" class="result"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
